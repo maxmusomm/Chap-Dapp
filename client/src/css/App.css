@@ -1,0 +1,33 @@
+:root {
+  --bg-colour-1: rgb(26, 255, 0);
+  --bg-colour-1-grad: linear-gradient(207deg, rgba(26, 255, 0, 1) 0%, rgba(96, 96, 96, 1) 52%, rgba(0, 51, 251, 1) 88%);
+
+  --bg-colour-2: rgb(244, 0, 255);
+  --bg-colour-2-grad: radial-gradient(circle, rgba(244, 0, 255, 1) 0%, rgba(33, 242, 0, 1) 52%, rgba(10, 157, 133, 1) 88%);
+  ;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Playwrite+CU:wght@100..400&display=swap');
+
+* {
+  /* border: 1px solid pink; */
+  font-size: 1.2rem;
+  font-family: "Playwrite CU", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.top-bar {
+  color: white;
+  background: var(--bg-colour-1);
+  background: var(--bg-colour-1-grad);
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
