@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@100..900&family=Playwrite+CU:wght@100..400&display=swap');
+
+* {
+  font-family: "Playwrite CU", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .button-container {
   position: relative;
   /* Container to position the hover text */
@@ -34,4 +43,8 @@
   /* Show the text on hover */
   opacity: 1;
   /* Fade in the text */
+}
+
+.logo-name {
+  font-family: "Hind Siliguri", sans-serif;
 }
