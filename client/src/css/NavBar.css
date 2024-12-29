@@ -1,0 +1,7 @@
+.room-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  height: 3rem;
+}

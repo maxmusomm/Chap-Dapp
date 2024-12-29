@@ -9,6 +9,13 @@ contract MemeMix is ERC721 {
     uint256 public totalTokens;
     uint256 public totalRooms;
 
+    //address and total number of tokens
+    event Minted(address user, uint256 id);
+    //user and room id
+    event RoomJoined(address user, uint256 id);
+    //Room Name and id
+    event RoomCreated(string roomName, uint256 id);
+
     //id of room -> room
     mapping(uint256 => Room) public rooms;
     //id -> account -> is in room
@@ -41,6 +48,8 @@ contract MemeMix is ERC721 {
     function createRoom(string memory _name, uint256 _cost) public onlyOwner {
         totalRooms++;
         rooms[totalRooms] = Room({name: _name, cost: _cost, id: totalRooms});
+
+        emit RoomCreated(_name, totalRooms);
     }
 
     //User Functions
@@ -61,8 +70,10 @@ contract MemeMix is ERC721 {
 
         totalTokens++;
         joinedRooms[_id][msg.sender] = true;
+        emit RoomJoined(msg.sender, _id);
 
         _safeMint(msg.sender, totalTokens);
+        emit Minted(msg.sender, totalTokens);
     }
 
     // Just returns the room. What more do you want? 🙃

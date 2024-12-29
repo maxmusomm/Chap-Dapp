@@ -63,12 +63,13 @@ function App() {
     );
   };
 
+  //DOM return
   return (
     <>
       <div className="App">
         <div className="grid grid-rows-layout grid-cols-layout h-screen">
           {/* TopBar */}
-          <div className="row-span-1 col-span-2 border-b">
+          <div className="row-span-1 col-span-2 ">
             <TopBar
               walletAddress={walletAddress}
               isLoading={isLoading}
@@ -79,12 +80,12 @@ function App() {
           </div>
 
           {/* NavBar */}
-          <div className="nav-bar row-span-2 col-span-1 border-r">
+          <div className="row-span-2 col-span-1 p-0">
             <NavBar />
           </div>
 
           {/* ChartBar */}
-          <div className="chat-bar row-span-2 col-span-1">
+          <div className="chat-bar row-span-2 col-span-1 flex flex-col justify-end p-4 overflow-y-auto daisy-scrollbar  h-full">
             <ChatBar walletAddress={walletAddress} />
           </div>
         </div>
